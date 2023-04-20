@@ -29,7 +29,7 @@ async fn form_get(
 
 // this is dumb but it works
 // we don't use a hashmap because keys may be duplicated
-// this overwrites the entry with a certain key
+// this overwrites the first entry with a certain key
 fn form_set(form: &mut Vec<(String, String)>, key: &str, value: String) {
     for entry in form.iter_mut() {
         if entry.0 == key {
